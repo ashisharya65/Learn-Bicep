@@ -41,5 +41,4 @@ When you send a request from any of the Azure tools, APIs, or SDKs, Resource Man
 
 The following image shows the role Resource Manager plays in handling Azure requests:
 
-        https://docs.microsoft.com/en-us/learn/modules/includes/media/azure-resource-manager.png
-
+<img src="https://docs.microsoft.com/en-us/learn/modules/includes/media/azure-resource-manager.png" alt="Resrouce Manager" style="float: left; margin-right: 10px;" />
