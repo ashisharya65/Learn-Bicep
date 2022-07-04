@@ -54,13 +54,13 @@ The following image shows the role Resource Manager plays in handling Azure requ
 
 ### Data plane
 
-When starting a data plane operation, requests are sent to a specific endpoint in your Azure subscription. For example, the Detect Language operation in Cognitive Services is a data plane operation because the request URL is:
+- When starting a data plane operation, requests are sent to a specific endpoint in your Azure subscription. For example, the Detect Language operation in Cognitive Services is a data plane operation because the request URL is:
 
 
     POST https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/languages
 
 
-Resource Manager features like access control and locks don't always apply to data plane operations. For example, a user might not have permissions to manage a virtual machine by using the control plane, but the user can sign in to the operating system.
+- Resource Manager features like access control and locks don't always apply to data plane operations. For example, a user might not have permissions to manage a virtual machine by using the control plane, but the user can sign in to the operating system.
 
 
 ## What are ARM templates?
