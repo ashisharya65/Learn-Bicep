@@ -29,7 +29,7 @@
 
 - Better understand your cloud resources.
 
-Infrastructure as code can help you better understand the state of your cloud resources:
+   Infrastructure as code can help you better understand the state of your cloud resources:
 
    1. Audit trail: Changes to your infrastructure as code configurations are version-controlled in the same way as your application source code. These changes are tracked in your tooling, like with Git's version history. This audit trail means that you can review the details of each change, who made the change, and when the change was made.
 
