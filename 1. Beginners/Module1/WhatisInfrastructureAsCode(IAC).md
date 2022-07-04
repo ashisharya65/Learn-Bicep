@@ -31,7 +31,6 @@
     * Ansible, by RedHat
     * Terraform, by HashiCorp
 
-    <br/>
 
     #### Bicep Template that configures a storage account: 
 
