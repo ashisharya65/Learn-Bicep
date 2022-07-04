@@ -26,3 +26,20 @@ Resource Manager provides many benefits and capabilities related to infrastructu
 - You can redeploy your solution throughout the development lifecycle and have confidence that your resources are deployed in a consistent state.
 - You can manage your infrastructure through declarative templates instead of by using scripts.
 - You can specify resource dependencies to ensure that resources are deployed in the correct order.
+
+
+## Operations: Control plane and data plane
+
+You can execute two types of operations in Azure: control plane operations and data plane operations. Use the control plane to manage the resources in your subscription. Use the data plane to access features that are exposed by a resource.
+
+For example, you use a control plane operation to create a virtual machine, but you use a data plane operation to connect to the virtual machine by using Remote Desktop Protocol (RDP).
+
+
+### Control Plane
+
+When you send a request from any of the Azure tools, APIs, or SDKs, Resource Manager receives, authenticates, and authorizes the request. Then, it sends the request to the Azure resource provider, which takes the requested action. Because all requests are handled through the same API, you see consistent results and capabilities in all the different tools that are available in Azure.
+
+The following image shows the role Resource Manager plays in handling Azure requests:
+
+https://docs.microsoft.com/en-us/learn/modules/includes/media/azure-resource-manager.png
+
