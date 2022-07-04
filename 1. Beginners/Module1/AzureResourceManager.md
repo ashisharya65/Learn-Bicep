@@ -51,3 +51,42 @@ The following image shows the role Resource Manager plays in handling Azure requ
 
 - The control plane understands which resources need to be created and which resources already exist. Resource Manager understands the difference between these requests and won't create identical resources or delete existing resources, although there are ways to override this behavior.
 
+
+### Data plane
+
+When starting a data plane operation, requests are sent to a specific endpoint in your Azure subscription. For example, the Detect Language operation in Cognitive Services is a data plane operation because the request URL is:
+
+
+    POST https://eastus.api.cognitive.microsoft.com/text/analytics/v2.0/languages
+
+
+Resource Manager features like access control and locks don't always apply to data plane operations. For example, a user might not have permissions to manage a virtual machine by using the control plane, but the user can sign in to the operating system.
+
+
+## What are ARM templates?
+
+- ARM templates are files that define the infrastructure and configuration for your deployment. 
+- When you write an ARM template, you take a declarative approach to your resource provisioning. 
+- These templates describe each resource in the deployment, but they don't describe how to deploy the resources. 
+- When you submit a template to Resource Manager for deployment, the control plane can deploy the defined resources in an organized and consistent manner. 
+
+### Why use ARM templates?
+
+There are many benefits to using ARM templates, both JSON and Bicep, for your resource provisioning:
+
+- <b>Repeatable results</b>: ARM templates are idempotent, which means that you can repeatedly deploy the same template and get the same result. The template doesn't duplicate resources.
+
+- <b>Orchestration</b>: When a template deployment is submitted to Resource Manager, the resources in the template are deployed in parallel. This process allows deployments to finish faster. Resource Manager orchestrates these deployments in the correct order if one resource depends on another.
+
+- <b>Preview</b>: The what-if tool, available in PowerShell and Azure CLI, allows you to preview changes to your environment before template deployment. This tool will detail any creations, modification, and deletions that will be made by your template.
+
+- <b>Testing and Validation</b>: You can use tools like the Bicep linter to check the quality of your templates before deployment. ARM templates submitted to Resource Manager are validated before the deployment process. This validation alerts you to any errors in your template before resource provisioning.
+
+- <b>Modularity</b>: You can break up your templates into smaller components and link them together at deployment.
+
+- <b>CI/CD integration</b>: Your ARM templates can be integrated into multiple CI/CD tools, like Azure DevOps and GitHub Actions. You can use these tools to version templates through source control and build release pipelines.
+
+- <b>Extensibility</b>: With deployment scripts, you can run Bash or PowerShell scripts from within your ARM templates. These scripts perform tasks, like data plane operations, at deployment. Through extensibility, you can use a single ARM template to deploy a complete solution.
+
+
+
