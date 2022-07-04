@@ -89,4 +89,8 @@ There are many benefits to using ARM templates, both JSON and Bicep, for your re
 - <b>Extensibility</b>: With deployment scripts, you can run Bash or PowerShell scripts from within your ARM templates. These scripts perform tasks, like data plane operations, at deployment. Through extensibility, you can use a single ARM template to deploy a complete solution.
 
 
+## JSON and Bicep templates
+
+Two types of ARM templates are available for use today: JSON templates and Bicep templates. JavaScript Object Notation (JSON) is an open-standard file format that multiple languages can use. Bicep is a new domain-specific language that was recently developed for authoring ARM templates by using an easier syntax. You can use either template format for your ARM templates and resource deployments.
+
 
