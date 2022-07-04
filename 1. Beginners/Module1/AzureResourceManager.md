@@ -16,3 +16,13 @@ As you begin your cloud journey with Resource Manager, it's important to underst
 - <b>Management group</b>: A logical container that you use to manage more than one subscription. You can define a hierarchy of management groups, subscriptions, resource groups, and resources to efficiently manage access, policies, and compliance through inheritance.
 
 - <b>Azure Resource Manager template (ARM template)</b>: A template file that defines one or more resources to deploy to a resource group, subscription, management group, or tenant. You can use the template to deploy the resources in a consistent and repeatable way. There are two types of ARM template files: JSON and Bicep. This module focuses on the Bicep type of ARM template.
+
+
+## Benefits
+
+Resource Manager provides many benefits and capabilities related to infrastructure as code resource provisioning:
+
+- You can deploy, manage, and monitor the resources in your solution as a group instead of individually.
+- You can redeploy your solution throughout the development lifecycle and have confidence that your resources are deployed in a consistent state.
+- You can manage your infrastructure through declarative templates instead of by using scripts.
+- You can specify resource dependencies to ensure that resources are deployed in the correct order.
