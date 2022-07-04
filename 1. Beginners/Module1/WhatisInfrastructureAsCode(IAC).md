@@ -31,8 +31,9 @@
     * Ansible, by RedHat
     * Terraform, by HashiCorp
 
+    <br/>
 
-    Bicep Template
+    #### Bicep Template that configures a storage account: 
 
         resource storageAccount 'Microsoft.Storage/storageAccounts@2019-06-01' = {
         name: 'mystorageaccount'
