@@ -36,6 +36,16 @@
 
 ## Understand parameter types
 
+- When you declare a parameter, you need to tell Bicep what type of information the parameter will contain. 
+
+- Bicep will ensure that the value assigned to the parameter is compatible with the parameter type.
+
+- Parameters in Bicep can be one of the following types:
+
+    * string, which lets you enter arbitrary text.
+    * int, which lets you enter a number.
+    * bool, which represents a Boolean (true or false) value.
+    * object and array, which represent structured data and lists.
 
 
 
