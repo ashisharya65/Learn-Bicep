@@ -1,2 +1,3 @@
 # Bicep_Learning
-Putting all my Azure Bicep learning notes here.
+
+This contains all my notes for learning Azure Bicep.
