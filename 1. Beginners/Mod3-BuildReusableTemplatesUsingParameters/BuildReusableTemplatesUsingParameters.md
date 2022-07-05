@@ -48,4 +48,63 @@
     * object and array, which represent structured data and lists.
 
 
+### Objects
+
+- You can use <b><i>Object</i></b> parameters to combine structured data together in one place.
+- An object can have multiple properties of different types.
+- You can use objects within resource definitions, within variables, or within expressions in your Bicep file.
+
+    Here's an example of an object:
+
+        param appServicePlanSku object = {
+            name: 'F1'
+            tier: 'Free'
+            capacity: 1
+        }
+- This parameter is an object with two string properties, <b><i>name</i></b> and <b><i>tier</i></b>, and an integer property, capacity. Notice that each of the properties is on its own line.
+
+- When you reference the parameter in the template, you can select the individual properties of the object by using a dot followed by the name of the property, like in this example:
+
+        resource appServicePlan 'Microsoft.Web/serverFarms@2020-06-01' = {
+            name: appServicePlanName
+            location: location
+            sku: {
+                name: appServicePlanSku.name
+                tier: appServicePlanSku.tier
+                capacity: appServicePlanSku.capacity
+            }
+        }
+
+- Another example of where you might use an object parameter is for specifying resource tags. 
+- You can attach custom tag metadata to the resources that you deploy, which you can use to identify important information about a resource.
+- Tags are useful for scenarios like tracking which team owns a resource, or when a resource belongs to a production or non-production environment. Typically, you'll use different tags for each environment, but you'll want to reuse the same tag values on all the resources within your template. For this reason, resource tags are a good use for an object parameter, like in this example:
+
+        param resourceTags object = {
+            EnvironmentName: 'Test'
+            CostCenter: '1000100'
+            Team: 'Human Resources'
+        }
+
+- Whenever you define a resource in your Bicep file, you can reuse it wherever you define the tags property:
+
+        resource appServicePlan 'Microsoft.Web/serverfarms@2020-06-01' = {
+            name: appServicePlanName
+            location: location
+            tags: resourceTags
+            sku: {
+                name: 'S1'
+            }
+        }
+
+        resource appServiceApp 'Microsoft.Web/sites@2020-06-01' = {
+            name: appServiceAppName
+            location: location
+            tags: resourceTags
+            kind: 'app'
+            properties: {
+                serverFarmId: appServicePlan.id
+            }
+        }
+
+### Arrays
 
