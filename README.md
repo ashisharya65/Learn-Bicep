@@ -1,3 +1,3 @@
 # Bicep_Learning
 
-This contains all my notes for learning Azure Bicep.
+This repository contains all of my notes pertaining to learning Bicep.
