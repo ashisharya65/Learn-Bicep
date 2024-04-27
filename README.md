@@ -1,3 +1,3 @@
 # Bicep_Learning
 
-This repository contains all of my notes pertaining to learning Bicep.
+This repository comprises all of my notes related to learning Bicep.
