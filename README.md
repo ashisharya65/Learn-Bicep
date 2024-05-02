@@ -1,3 +1,4 @@
 # Azure Bicep
 
-This repository comprises all of my notes related to learning Bicep.
+This repository contains all my scripts and notes created while learning Azure Bicep.
+
