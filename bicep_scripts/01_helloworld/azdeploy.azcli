@@ -1,0 +1,6 @@
+rg="bicep-demo"
+loc="eastus"
+
+az group create --resource-group $rg --location $loc
+az deployment group create -g $rg -f main.bicep
+az group delete -g $rg -l $loc --yes
