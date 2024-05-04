@@ -1,3 +1,6 @@
+# login to the Azure account using Azure cli
+az login
+
 # variable declarations
 rg="bicepdemo-rg"
 loc="eastus"
