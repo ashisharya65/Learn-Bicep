@@ -1,6 +1,15 @@
+# login to the Azure account using Azure cli
+az login
+
+# variable declarations
 rg="bicep-demo"
 loc="eastus"
 
+# creating the resource group
 az group create --resource-group $rg --location $loc
+
+# deployment to the resource group
 az deployment group create -g $rg -f main.bicep
-az group delete -g $rg -l $loc --yes
+
+# deleting the resource group
+az group delete -g $rg --yes
